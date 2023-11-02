@@ -1,0 +1,25 @@
+Understanding the working of IPv6 under low power losely network
+
+Step1: Go to VM ware -> open virtual machine -> Go to E drive -> select Ubutu_pooja -> Select Ubuntu_1804_64bit -> Click on open -> resume
+
+Step2: Steps to open pooja simulator 
+1. Go to root directory
+2. cd contiki-ng
+3. cd tools 
+4. cd cooja
+5. ant run
+
+Steps to create and configure them as server and client
+
+1. Goto File -> New simulation
+2. Name the simulation and click on create
+3. click on notes -> Add notes -> Create a new note type -> Sky note
+4. Click on Browse and select ipv6-hooks.c (/contiki-ng/exmamples/libs/ipv6-hooks)
+5. Click on open and then on compile and then on create
+6. Enter the number of notes as 4 and click on add notes
+7. Place all notes close to each other such that the coverage is 100% free for each of them
+8. Right click on note 1 and then click more toold for sky1 and then on Serial Socket (SERVER). Note 1 has been configured as server.
+9. Similarly, configre notes 2,3 nad 4 as clients,
+10. Copy the server's listening port numbner and paste it as the port number for all clients.
+11. Start the sertver and connect the client to the server.
+12. Run the simulation by clicking on Simulation -> Run Simulation.

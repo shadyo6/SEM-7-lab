@@ -62,7 +62,7 @@ get m1.txt
 
 # Ubuntu download
 
-### To download a file, example to download m1.txt 
+### To download a file, example to download m1.txt (To download other file replace m1.txt with the file name)
 ```
 wget -r -nH --cut-dirs=5 -nc ftp://software:software@210.212.207.12//wwampserver_/bin/m1.txt
 ```

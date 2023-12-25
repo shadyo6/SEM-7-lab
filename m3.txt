@@ -1,0 +1,214 @@
+Instructions:
+
+Creating a New project:
+●	Open Android Studio and then click on File -> New -> New project.
+●	Then type the Application name as “ex.no.3″ and click Next. 
+●	Then select the Minimum SDK as shown below and click Next.
+●	Then select the Empty Activity and click Next. 
+●	Finally click Finish.
+●	It will take some time to build and load the project.
+
+Designing layout for the Android Application:
+●	Click on app -> res -> layout -> activity_main.xml.
+●	Now click on Text as shown below.
+●	Then delete the code which is there and type the code as given below.
+●	Now click on Design and your application will look as given below.
+●	So now the designing part is completed
+
+Java Coding for the Android Application:
+●	Click on app -> java -> com.example.exno3 -> MainActivity.
+●	Then delete the code which is there and type the code as given below.
+●	So now the Coding part is also completed.
+●	Now run the application to see the output.
+
+Changes in build.gradle.kts(compulsary):
+1. go to Project Tab to the left, navigate to Gradle Scripts
+2. in Gradle Scripts, double click on build.gradle.kts(Module:app)
+3. in the android {} code, change compileSdk to 34
+4. delete the dependencies {} code and write this instead:
+dependencies {
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.5.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+}
+5. click save changes and let the project download the dependencies.
+
+
+Activity_main.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/num1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="1st number"
+            android:inputType="number|numberDecimal"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/num2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="2nd Number"
+            android:inputType="number|numberDecimal"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:layout_marginRight="10dp"
+            android:onClick="handleAdd"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/sub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:layout_marginRight="10dp"
+            android:onClick="handleSub"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/mul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:layout_marginRight="10dp"
+            android:onClick="handleMul"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/div"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:layout_marginRight="10dp"
+            android:onClick="handleDiv"
+            android:text="/" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="100dp"
+        >
+
+        <TextView
+            android:id="@+id/ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:hint="Answer will appear here" />
+    </LinearLayout>
+
+</LinearLayout>
+
+package com.example.calcu;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+public class MainActivity extends AppCompatActivity {
+
+    float a, b, c;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void handleAdd(View view) {
+        EditText num1 = findViewById(R.id.num1);
+        EditText num2 = findViewById(R.id.num2);
+        TextView ans = findViewById(R.id.ans);
+
+        a = Float.parseFloat(num1.getText().toString());
+        b = Float.parseFloat(num2.getText().toString());
+        c = a + b;
+        ans.setText(" " + a + " + " + " " + b + "  = " + c);
+    }
+
+    public void handleSub(View view) {
+        EditText num1 = findViewById(R.id.num1);
+        EditText num2 = findViewById(R.id.num2);
+        TextView ans = findViewById(R.id.ans);
+
+        a = Float.parseFloat(num1.getText().toString());
+        b = Float.parseFloat(num2.getText().toString());
+        c = a - b;
+        ans.setText(" " + a + " - " + " " + b + "  = " + c);
+
+    }
+
+    public void handleMul(View view) {
+        EditText num1 = findViewById(R.id.num1);
+        EditText num2 = findViewById(R.id.num2);
+        TextView ans = findViewById(R.id.ans);
+
+        a = Float.parseFloat(num1.getText().toString());
+        b = Float.parseFloat(num2.getText().toString());
+        c = a * b;
+        ans.setText(" " + a + " * " + " " + b + "  = " + c);
+
+    }
+
+    public void handleDiv(View view) {
+        EditText num1 = findViewById(R.id.num1);
+        EditText num2 = findViewById(R.id.num2);
+        TextView ans = findViewById(R.id.ans);
+
+        a = Float.parseFloat(num1.getText().toString());
+        b = Float.parseFloat(num2.getText().toString());
+        c = a / b;
+        ans.setText(" " + a + " / " + " " + b + "  = " + c);
+
+    }
+
+}

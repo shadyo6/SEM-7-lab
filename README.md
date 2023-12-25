@@ -30,6 +30,38 @@ n10.txt
 
 ```
 
+# Windows download
+- for ubuntu check below
+
+### STEP0: Open the powershell
+
+### STEP1: Navigate to the folder you want to download the files in this case we are going to download it in the downloads folder
+
+```
+cd Downloads
+```
+
+### STEP2: login to the server
+```
+sftp software@210.212.207.12
+```
+
+- it will ask **yes** or **no** for the fist time, type **yes**
+- Then password is expected and you already know it
+
+### STEP 3: Navigate to the file
+```
+cd wampserver_/bin
+```
+
+### STEP 4: download the required file (example)
+
+```
+get m1.txt
+```
+
+# Ubuntu download
+
 ### To download a file, example to download m1.txt 
 ```
 wget -r -nH --cut-dirs=5 -nc ftp://software:software@210.212.207.12//wwampserver_/bin/m1.txt

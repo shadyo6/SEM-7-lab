@@ -32,7 +32,13 @@ n10.txt
 
 ### To download a file, example to download m1.txt 
 ```
-ftp://software:*password*@210.212.207.12//wwampserver_/bin/m1.txt
+wget -r -nH --cut-dirs=5 -nc ftp://software:software@210.212.207.12//wwampserver_/bin/m1.txt
+```
+
+### To download all files
+
+```
+wget -r -nH --cut-dirs=5 -nc ftp://software:software@210.212.207.12//wwampserver_/bin/*
 ```
 
 ### To delete history

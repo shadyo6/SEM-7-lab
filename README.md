@@ -1,6 +1,6 @@
 #!/bin/less
 
-files to be downloaded
+## files to be downloaded
 
 ```
 #MAD
@@ -30,15 +30,13 @@ n10.txt
 
 ```
 
-To download a file, example to download m1.txt 
+### To download a file, example to download m1.txt 
 ```
 ftp://software:*password*@210.212.207.12//wwampserver_/bin/m1.txt
 ```
 
-To delete history
+### To delete history
 
 ```
 history -c
 ```
-
-# SEM 7 lab files

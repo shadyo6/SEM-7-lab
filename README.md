@@ -36,6 +36,14 @@ n10.txt
 sftp lab2@10.11.1.121:/C:/Users/Lab2/wwampserver_/bin/m1.txt
 ```
 
+#### Note: It will ask yes or no for the first time type 'yes'
+
+### Password
+
+```
+2
+```
+
 ### To delete history on windows
 
 ```

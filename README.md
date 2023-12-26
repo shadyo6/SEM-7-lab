@@ -30,50 +30,19 @@ n10.txt
 
 ```
 
-# Windows download
-- for ubuntu check below
-
-### STEP0: Open the powershell
-
-### STEP1: Navigate to the folder you want to download the files in this case we are going to download it in the downloads folder
+### To download a specific file for example m1.txt
 
 ```
-cd Downloads
+sftp lab2@10.11.1.121:/C:/Users/Lab2/wwampserver_/bin/m1.txt
 ```
 
-### STEP2: login to the server
-```
-sftp lab2@10.11.1.121
-```
-
-- it will ask **yes** or **no** for the fist time, type **yes**
-- Then password is expected and you already know it
-
-### STEP 3: Navigate to the file
-```
-cd wampserver_/bin
-```
-
-### STEP 4: download the required file (example)
+### To delete history on windows
 
 ```
-get m1.txt
+Clear-History
 ```
 
-# Ubuntu download
-
-### To download a file, example to download m1.txt (To download other file replace m1.txt with the file name)
-```
-wget -r -nH --cut-dirs=5 -nc ftp://2:lab2@10.11.1.121//wwampserver_/bin/m1.txt
-```
-
-### To download all files
-
-```
-wget -r -nH --cut-dirs=5 -nc ftp://2:lab2@10.11.1.121//wwampserver_/bin/*
-```
-
-### To delete history
+### To delete history on ubuntu
 
 ```
 history -c

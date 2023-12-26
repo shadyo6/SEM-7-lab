@@ -64,13 +64,13 @@ get m1.txt
 
 ### To download a file, example to download m1.txt (To download other file replace m1.txt with the file name)
 ```
-wget -r -nH --cut-dirs=5 -nc ftp://software:lab2@10.11.1.121//wwampserver_/bin/m1.txt
+wget -r -nH --cut-dirs=5 -nc ftp://2:lab2@10.11.1.121//wwampserver_/bin/m1.txt
 ```
 
 ### To download all files
 
 ```
-wget -r -nH --cut-dirs=5 -nc ftp://software:lab2@10.11.1.121//wwampserver_/bin/*
+wget -r -nH --cut-dirs=5 -nc ftp://2:lab2@10.11.1.121//wwampserver_/bin/*
 ```
 
 ### To delete history

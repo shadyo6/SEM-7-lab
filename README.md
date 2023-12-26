@@ -33,7 +33,7 @@ n10.txt
 ### To download a specific file for example m1.txt
 
 ```
-sftp lab2@10.11.1.121:/C:/Users/Lab2/wwampserver_/bin/m1.txt
+sftp lab2@10.11.1.121:/Users/Lab2/wwampserver_/bin/m1.txt
 ```
 
 #### Note: It will ask yes or no for the first time type 'yes'

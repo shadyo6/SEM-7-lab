@@ -43,7 +43,7 @@ cd Downloads
 
 ### STEP2: login to the server
 ```
-sftp software@210.212.207.12
+sftp software@10.11.1.121
 ```
 
 - it will ask **yes** or **no** for the fist time, type **yes**
@@ -64,13 +64,13 @@ get m1.txt
 
 ### To download a file, example to download m1.txt (To download other file replace m1.txt with the file name)
 ```
-wget -r -nH --cut-dirs=5 -nc ftp://software:software@210.212.207.12//wwampserver_/bin/m1.txt
+wget -r -nH --cut-dirs=5 -nc ftp://software:software@10.11.1.121//wwampserver_/bin/m1.txt
 ```
 
 ### To download all files
 
 ```
-wget -r -nH --cut-dirs=5 -nc ftp://software:software@210.212.207.12//wwampserver_/bin/*
+wget -r -nH --cut-dirs=5 -nc ftp://software:software@10.11.1.121//wwampserver_/bin/*
 ```
 
 ### To delete history

@@ -10,15 +10,15 @@ m3.txt
 m4.txt
 m5.txt
 
-NPwriteup   #All termworks write up pdf
+NPwriteup.pdf     #All termworks write up pdf
 
 #NP
-n1mr.c      #Message receiver for tw1
-n1ms.c      #Message sender for tw1
-n1p.c       #Pipes for tw1
+n1mr.c            #Message receiver for tw1
+n1ms.c            #Message sender for tw1
+n1p.c             #Pipes for tw1
 
-n2s.c       #client file
-n2c.c       #server file
+n2s.c             #client file
+n2c.c             #server file
 
 n3.c
 

@@ -50,7 +50,7 @@ sftp lab2@10.11.1.121:/C:/wwampserver_/v.txt
 
 ### After download you can find the file here
 
-https://github.com/shadyo6/SEM-7-lab/assets/107540007/25813573-e668-4577-a978-046510b5c84a
+https://github.com/shadyo6/SEM-7-lab/assets/107540007/eed74035-1865-461c-bfb5-8634a03e90b0
 
 ### To delete history on windows
 

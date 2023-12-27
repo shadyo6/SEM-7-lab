@@ -28,9 +28,11 @@ n8.txt
 n9.txt
 n10.txt
 
+v.txt      #NP viva answers file
+
 ```
 
-### To download a specific file for example m1.txt
+### To download a specific file for example v1.txt
 
 ```
 sftp lab2@10.11.1.121:/C:/wwampserver_/v.txt

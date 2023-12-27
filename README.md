@@ -10,6 +10,8 @@ m3.txt
 m4.txt
 m5.txt
 
+NPwriteup   #All termworks write up pdf
+
 #NP
 n1mr.c      #Message receiver for tw1
 n1ms.c      #Message sender for tw1
